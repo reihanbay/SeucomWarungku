@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.seucom.warungku.R
 import com.seucom.warungku.databinding.FragmentEditShopBinding
@@ -32,7 +33,15 @@ class EditShopFragment : Fragment() {
 
     private fun initAction() {
         bind.btnSubmit.setOnClickListener {
-            findNavController().navigate(EditShopFragmentDirections.actionEditShopFragmentToMainFragment())
+            val nama = bind.etName.edtText.text?.length
+            val alamat = bind.etAddress.edtText.text?.length
+
+            if (nama!! > 50 || alamat!! > 1000) {
+                Toast.makeText(requireContext(), "Karakter Melebihi Batas Maksimal", Toast.LENGTH_LONG).show()
+            } else {
+                findNavController().navigate(EditShopFragmentDirections.actionEditShopFragmentToMainFragment())
+
+            }
         }
     }
 

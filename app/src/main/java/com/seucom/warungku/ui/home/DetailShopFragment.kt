@@ -58,7 +58,7 @@ class DetailShopFragment : Fragment() {
             edtText.setText(data.alamat)
         }
 
-        Glide.with(view).load(data.image).into(bind.ivShop)
+        Glide.with(view.context).load(data.image).into(bind.ivShop)
 
     }
 }

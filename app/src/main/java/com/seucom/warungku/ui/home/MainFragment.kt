@@ -15,7 +15,7 @@ class MainFragment : Fragment() {
     private var binding : FragmentMainBinding? = null
     private val bind get() = binding!!
 
-    private val link = "https://id.lovepik.com/image-500132659/shopping-mall-mens-shirt-shop-display.html"
+    private val link = "https://cdn.kibrispdr.org/data/572/gambar-toko-baju-yang-ada-di-jakarta-9.jpg"
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,7 +37,7 @@ class MainFragment : Fragment() {
             tvName.text = "Toko Baju Ej'N'Em"
             tvAddress.text = "Jalan Pegangsaan Timur no 56"
             tvKoordinat.text = "-6.1999555122960865, 106.84257825756093"
-            Glide.with(view).load(link).into(ivShop)
+            Glide.with(view.context).load(link).into(ivShop)
         }
     }
     private fun initAction() {

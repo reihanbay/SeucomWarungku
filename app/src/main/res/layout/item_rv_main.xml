@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:minHeight="64dp"
         android:minWidth="64dp"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/container_layout_round"
