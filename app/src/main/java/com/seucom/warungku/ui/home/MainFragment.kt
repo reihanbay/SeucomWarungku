@@ -38,6 +38,7 @@ class MainFragment : Fragment() {
             tvAddress.text = "Jalan Pegangsaan Timur no 56"
             tvKoordinat.text = "-6.1999555122960865, 106.84257825756093"
             Glide.with(view.context).load(link).into(ivShop)
+            ivShop.clipToOutline = true
         }
     }
     private fun initAction() {

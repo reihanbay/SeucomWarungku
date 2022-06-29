@@ -40,7 +40,6 @@ class EditShopFragment : Fragment() {
                 Toast.makeText(requireContext(), "Karakter Melebihi Batas Maksimal", Toast.LENGTH_LONG).show()
             } else {
                 findNavController().navigate(EditShopFragmentDirections.actionEditShopFragmentToMainFragment())
-
             }
         }
     }
