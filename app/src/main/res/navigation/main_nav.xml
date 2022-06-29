@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.seucom.warungku.ui.user.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.seucom.warungku.ui.user.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/detailShopFragment"
+        android:name="com.seucom.warungku.ui.home.DetailShopFragment"
+        android:label="fragment_detail_shop"
+        tools:layout="@layout/fragment_detail_shop" >
+        <action
+            android:id="@+id/action_detailShopFragment_to_editShopFragment"
+            app:destination="@id/editShopFragment" />
+        <argument
+            android:name="image"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="alamat"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="coordinate"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.seucom.warungku.ui.home.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_detailShopFragment"
+            app:destination="@id/detailShopFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_editShopFragment"
+            app:destination="@id/editShopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editShopFragment"
+        android:name="com.seucom.warungku.ui.home.EditShopFragment"
+        android:label="fragment_edit_shop"
+        tools:layout="@layout/fragment_edit_shop" >
+        <action
+            android:id="@+id/action_editShopFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

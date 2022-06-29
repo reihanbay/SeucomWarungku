@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/container_layout_round"
+    android:layout_marginVertical="6dp"
+    android:padding="12dp">
+    <ImageView
+        android:id="@+id/iv_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="64dp"
+        android:minWidth="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/container_layout_round"
+        android:backgroundTint="@color/grey"/>
+    <TextView
+        style="@style/TextView.Header3"
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintStart_toEndOf="@id/iv_shop"
+        app:layout_constraintTop_toTopOf="@id/iv_shop"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Name"
+        />
+
+    <TextView
+        style="@style/TextView.Subheader2.sBold"
+        android:id="@+id/tv_address"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintStart_toEndOf="@id/iv_shop"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        android:textColor="@color/yellow_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Name"
+        />
+
+    <TextView
+        style="@style/TextView.Subheader2"
+        android:id="@+id/tv_koordinat"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/iv_shop"
+        app:layout_constraintTop_toBottomOf="@id/tv_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Koordinat"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

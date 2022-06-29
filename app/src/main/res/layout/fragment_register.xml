@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ContainerView"
+    android:orientation="vertical"
+    tools:context=".ui.user.RegisterFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:maxHeight="82dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:text="@string/sign_up"
+        style="@style/TextView.Header"
+        android:layout_marginTop="76dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <include layout="@layout/edit_text"
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"/>
+
+    <include layout="@layout/edit_text_password"
+        android:id="@+id/et_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"/>
+
+    <include layout="@layout/edit_text_password"
+        android:id="@+id/et_re_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/TextView.Header3"
+            android:layout_width="wrap_content"
+            android:text="@string/have_acc"/>
+        <TextView
+            android:id="@+id/tv_sign_in"
+            style="@style/TextView.Header3"
+            android:layout_marginHorizontal="8dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/red_200"
+            android:text="@string/sign_in"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Button"
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
